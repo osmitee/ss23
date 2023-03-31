@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "KopyMe";
+  src: url("KOPYME-Again-WebTrial.woff2") format("woff2"),
+    url("KOPYME-Again-WebTrial.woff") format("woff");
+}
+
 body {
   font-family: sans-serif;
   background-image: linear-gradient(yellow, pink);
@@ -5,7 +11,7 @@ body {
 }
 
 h2 {
-  break-after: page;
+  /* break-before: page; */
 }
 
 @media print {
@@ -17,48 +23,48 @@ h2 {
 @page {
   size: 5in 8in;
   margin-top: 0.5in;
-  margin-bottom: 0.5in;
+  /* margin-bottom: 0.5in; */
 }
-@page:left {
+@page: left {
   margin-left: 0.5in;
   margin-right: 0.5in;
 
-@bottom-left {
-        content: counter(page);
-    }
+  @bottom-left {
+    /* content: counter(page); */
+  }
 
-    @bottom-right {
-        content: "UNDRE(SS)";
-    }
+  @bottom-right {
+    content: "";
+  }
 }
 
-@page:right {
+@page: right {
   margin-left: 0.5in;
   margin-right: 0.5in;
 
-@bottom-left {
-    content: "Smitee Oberoi";
-}
+  @bottom-left {
+    content: "";
+  }
 
-@bottom-right {
-    content: counter(page);
-}
+  @bottom-right {
+    /* content: counter(page); */
+  }
 }
 
 img {
-    width: 100%;
-    padding: 5%;
-    scale: 100%;
+  width: 100%;
+  padding: 5%;
+  scale: 100%;
 }
 
 .two-col {
-    color: red;
-    column-count: 3;
-    column-gap: 2em;
+  color: red;
+  column-count: 3;
+  column-gap: 2em;
 }
 
 p:first-child {
-    margin: 0;
+  margin: 0;
 }
 
 .annasui {
@@ -70,4 +76,153 @@ p:first-child {
   grid-template-columns: repeat(4, 1fr);
   row-gap: 2rem;
   grid-template-rows: repeat(2, 1fr);
+}
+
+.titles {
+  font-family: KopyMe;
+  color: #3f5f94;
+  transform: rotate(-90deg);
+}
+
+.denim {
+  position: absolute;
+  font-size: 42pt;
+  top: 49.7%;
+  right: -9%;
+  break-before: page;
+}
+
+.circles {
+  border: solid 2pt #ee2626;
+  border-radius: 100%;
+  width: 320px;
+  height: 190px;
+  margin-top: -40px;
+  /* left: 25%; */
+}
+
+.circle-container {
+  position: relative;
+  top: 9%;
+  left: 10%;
+}
+
+.sst-mnz {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  position: absolute;
+  top: 35px;
+  left: 15%;
+  column-gap: 20px;
+}
+
+.sstmnz {
+  width: 145%;
+}
+
+.one {
+  position: relative;
+  top: 50px;
+}
+
+.three {
+  position: relative;
+  top: -50px;
+}
+
+.two {
+  position: relative;
+  left: 10px;
+}
+
+.denimbg {
+  background: radial-gradient(
+    ellipse at right top,
+    #bec0c2 0%,
+    #fff 50%,
+    #b8babc 100%
+  );
+  width: 27vw;
+  height: 90vh;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: -100px;
+  top: -50px;
+  mix-blend-mode: darken;
+}
+
+.denimbgA {
+  background: radial-gradient(
+    ellipse at bottom,
+    #bec0c2 0%,
+    #fff 50%,
+    #b8babc 100%
+  );
+  width: 27vw;
+  height: 90vh;
+  z-index: 3;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: -100px;
+  top: -50px;
+  mix-blend-mode: darken;
+}
+
+.bluerect {
+  width: 111px;
+  height: 30px;
+  background-color: #3f5f94;
+  position: absolute;
+  left: -100px;
+}
+
+.A {
+  top: -50px;
+}
+
+.B {
+  position: relative;
+  height: 100px;
+  bottom: -95px;
+}
+
+.spreadB {
+  position: relative;
+  background-color: #3f5f94;
+  width: 56vh;
+  margin: 0;
+  height: 100vh;
+  right: 96px;
+  top: -50px;
+}
+
+.denimA {
+  position: absolute;
+  font-family: Work Sans;
+  font-weight: 300;
+  font-size: 40pt;
+  color: fff;
+  left: 61px;
+  top: 37px;
+  line-height: 48pt;
+}
+
+.denimpics {
+  width: 100%;
+}
+
+.neutrals {
+  position: absolute;
+  width: 56vh;
+  left: -97px;
+  top: -50px;
+}
+
+.C {
+  break-before: page;
+  left: -95px;
 }
