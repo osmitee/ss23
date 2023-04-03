@@ -21,13 +21,15 @@ h2 {
 }
 
 @page {
-  size: 5in 8in;
+  size: 4.75in 8in; /* original width (5") – bleed (0.25") */
+  bleed: 0.25in;
+  marks: crop;
   margin-top: 0.5in;
-  /* margin-bottom: 0.5in; */
+  margin-bottom: 0.25in;
 }
 @page: left {
-  margin-left: 0.5in;
-  margin-right: 0.5in;
+  margin-left: 0.25in;
+  margin-right: 0.25in;
 
   @bottom-left {
     /* content: counter(page); */
@@ -67,17 +69,6 @@ p:first-child {
   margin: 0;
 }
 
-.annasui {
-  background-image: radial-gradient(rgb(255, 248, 207), rgb(255, 187, 241));
-  border-radius: 100%;
-  height: 40%;
-  gap: 2px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  row-gap: 2rem;
-  grid-template-rows: repeat(2, 1fr);
-}
-
 .titles {
   font-family: KopyMe;
   color: #3f5f94;
@@ -87,8 +78,8 @@ p:first-child {
 .denim {
   position: absolute;
   font-size: 42pt;
-  top: 49.7%;
-  right: -9%;
+  top: 44.6%;
+  right: -19%;
   break-before: page;
 }
 
@@ -103,7 +94,7 @@ p:first-child {
 
 .circle-container {
   position: relative;
-  top: 9%;
+  top: 6vh;
   left: 10%;
 }
 
@@ -113,7 +104,7 @@ p:first-child {
   grid-template-rows: repeat(2, 1fr);
   position: absolute;
   top: 35px;
-  left: 15%;
+  left: 20%;
   column-gap: 20px;
 }
 
@@ -143,15 +134,16 @@ p:first-child {
     #fff 50%,
     #b8babc 100%
   );
-  width: 27vw;
-  height: 90vh;
-  z-index: 2;
+  width: 120vw;
+  height: 100vh;
+  z-index: 0;
   margin: 0;
   padding: 0;
   position: absolute;
-  right: -100px;
-  top: -50px;
+  right: -120px;
+  top: -80px;
   mix-blend-mode: darken;
+  background-size: cover;
 }
 
 .denimbgA {
@@ -161,27 +153,28 @@ p:first-child {
     #fff 50%,
     #b8babc 100%
   );
-  width: 27vw;
-  height: 90vh;
-  z-index: 3;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
   margin: 0;
   padding: 0;
   position: absolute;
-  right: -100px;
-  top: -50px;
+  right: -120px;
+  top: -80px;
   mix-blend-mode: darken;
+  background-size: cover;
 }
 
 .bluerect {
   width: 111px;
-  height: 30px;
   background-color: #3f5f94;
   position: absolute;
   left: -100px;
 }
 
 .A {
-  top: -50px;
+  top: -79px;
+  height: 60px;
 }
 
 .B {
@@ -190,14 +183,29 @@ p:first-child {
   bottom: -95px;
 }
 
+.BC {
+  z-index: 3;
+  height: 110vh;
+  left: -25vh;
+  bottom: -10vh;
+}
+
 .spreadB {
   position: relative;
-  background-color: #3f5f94;
   width: 56vh;
   margin: 0;
   height: 100vh;
   right: 96px;
-  top: -50px;
+  top: 0px;
+  background-size: cover;
+}
+.sstmnz-bg {
+  position: absolute;
+  top: -6vh;
+  left: 0px;
+  background-color: #3f5f94;
+  background-size: cover;
+  height: 100vh;
 }
 
 .denimA {
@@ -207,22 +215,159 @@ p:first-child {
   font-size: 40pt;
   color: fff;
   left: 61px;
-  top: 37px;
+  top: 50px;
   line-height: 48pt;
 }
 
 .denimpics {
+  position: relative;
   width: 100%;
+  top: 12px;
 }
 
 .neutrals {
   position: absolute;
   width: 56vh;
-  left: -97px;
+  left: -100px;
   top: -50px;
 }
 
 .C {
   break-before: page;
-  left: -95px;
+  left: -90px;
+  z-index: 2;
+}
+
+.spread {
+  break-before: page;
+}
+
+.theobg {
+  background: radial-gradient(
+    ellipse at left,
+    #00b16d 0%,
+    #00b16d 10%,
+    #fff 50%,
+    #00b16d 100%
+  );
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: -100px;
+  top: -80px;
+  background-size: cover;
+}
+
+.theoA {
+  position: absolute;
+  font-family: Work Sans;
+  font-weight: 300;
+  font-size: 40pt;
+  color: 000;
+  line-height: 48pt;
+  z-index: 3;
+  left: -65px;
+  top: -20px;
+}
+
+.leather,
+.G,
+.H,
+.J,
+.K,
+.L,
+.M,
+.N {
+  position: absolute;
+  width: 56vh;
+  top: -50px;
+  left: -98px;
+}
+
+.HInfo {
+  font-family: Work Sans;
+  text-transform: uppercase;
+  width: 1.52in;
+  font-size: 9pt;
+  color: #ee2626;
+  position: relative;
+  z-index: 3;
+  line-height: 12pt;
+  top: 429px;
+  left: -40px;
+}
+
+.ascs-bg {
+  background: radial-gradient(
+    #a7ccd4 0%,
+    #a7ccd4 10%,
+    #fffce1 48%,
+    #a7ccd4 90%,
+    #a7ccd4 100%
+  );
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: -100px;
+  top: -80px;
+  background-size: cover;
+}
+
+.ascsA {
+  position: absolute;
+  font-family: Work Sans;
+  font-weight: 300;
+  font-size: 40pt;
+  color: #61ab55;
+  line-height: 48pt;
+  z-index: 3;
+  left: -65px;
+  top: -20px;
+}
+
+.ascsCircle {
+  position: absolute;
+  border: solid 2px #61ab55;
+  border-radius: 100%;
+  height: 89vh;
+  width: 20vh;
+  z-index: 5;
+  top: -48px;
+  right: -95px;
+}
+
+.CB {
+  right: 15px;
+}
+
+.NA {
+  position: absolute;
+  font-family: Work Sans;
+  font-weight: 300;
+  font-size: 40pt;
+  color: #d2232a;
+  line-height: 48pt;
+  z-index: 3;
+  left: -65px;
+  top: -20px;
+}
+
+.NInfo {
+  font-family: Work Sans;
+  text-transform: uppercase;
+  width: 1.8in;
+  font-size: 8pt;
+  color: #ee2626;
+  position: relative;
+  z-index: 5;
+  line-height: 10pt;
+  letter-spacing: 0.5px;
+  top: 415px;
+  left: 150px;
 }
