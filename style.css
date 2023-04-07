@@ -374,7 +374,16 @@ p:first-child {
 
 .cover,
 .back,
-.neutrals {
+.neutrals,
+.leather,
+.G,
+.H,
+.I,
+.J,
+.K,
+.L,
+.M,
+.N {
   position: absolute;
   left: -130;
   top: -72;
