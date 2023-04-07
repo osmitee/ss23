@@ -371,3 +371,11 @@ p:first-child {
   top: 415px;
   left: 150px;
 }
+
+.cover,
+.back {
+  position: absolute;
+  left: -130;
+  top: -72;
+  width: 195%;
+}
